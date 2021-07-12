@@ -348,7 +348,7 @@ Here is typical log output on startup::
   INFO:BlockProcessor:reorg limit is 200 blocks
   INFO:Daemon:daemon at 192.168.0.2:8332/
   INFO:BlockProcessor:flushing DB cache at 1,200 MB
-  INFO:Controller:RPC server listening on localhost:8000
+  INFO:Controller:RPC server listening on localhost:5005
   INFO:Prefetcher:catching up to daemon height 447,187...
   INFO:Prefetcher:verified genesis block with hash 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
   INFO:BlockProcessor:our height: 9 daemon: 447,187 UTXOs 0MB hist 0MB

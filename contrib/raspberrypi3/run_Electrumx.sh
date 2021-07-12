@@ -21,7 +21,7 @@ export SSL_PORT=50002
 
 # visibility
 export REPORT_HOST=hostname.com
-export RPC_PORT=8000
+export RPC_PORT=5005
 
 # run electrumx
 ulimit -n 10000

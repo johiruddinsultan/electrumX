@@ -12,7 +12,7 @@ The general form of invocation is::
 
 The port to send the commands to can be specified on the command line,
 otherwise the environment variable :envvar:`RPC_PORT` is used, and if
-that is not set then **8000** is assumed.
+that is not set then **5005** is assumed.
 
 The following commands are available:
 

@@ -98,9 +98,9 @@ Here are some examples of valid services::
   tcp://host.domain.tld:50501           # Hostname, lowercase protocol, port
   SSL://23.45.67.78:50502               # An IPv4 address, upper-case protocol, port
   rpC://localhost                       # Host as a string, mixed-case protocol, default port
-  ws://[1234:5678:abcd::5601]:8000      # Host as an IPv6 address
+  ws://[1234:5678:abcd::5601]:5005      # Host as an IPv6 address
   wss://h3ubaasdlkheryasd.onion:50501   # Host as a Tor ".onion" address
-  rpc://:8000                           # Default host, port given
+  rpc://:5005                           # Default host, port given
   host.domain.tld:5151                  # Default protocol, hostname, port
   rpc://                                # RPC protocol, default host and port
 
@@ -121,7 +121,7 @@ Here are some examples of valid services::
   *host* defaults to all of the machine's interfaces, except if the protocol is **rpc**,
   when it defaults to :const:`localhost`.
 
-  *port* can only be defaulted for **rpc** where the default is :const:`8000`.
+  *port* can only be defaulted for **rpc** where the default is :const:`5005`.
 
   On most Unix systems ports below 1024 require elevated privileges so choosing a higher
   port is advisable.  On Debian for example, this can be achieved by installing
@@ -141,7 +141,7 @@ Here are some examples of valid services::
 
   This serves **tcp**, **ssl**, **wss** on all interfaces on ports 50501, 50502 and 50504
   respectively.  **rpc** is served on its default host :const:`localhost` and default port
-  :const:`8000`.
+  :const:`5005`.
 
 .. envvar:: REPORT_SERVICES
 
