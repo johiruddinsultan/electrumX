@@ -673,24 +673,7 @@ class Bitcoin(BitcoinMixin, Coin):
     TX_COUNT_HEIGHT = 690723	
     TX_PER_BLOCK = 2200
     CRASH_CLIENT_VER = (3, 2, 3)
-    BLACKLIST_URL = 'https://electrum.org/blacklist.json'
-    PEERS = [
-        'electrum.vom-stausee.de s t',
-        'electrum.hsmiths.com s t',
-        'helicarrier.bauerj.eu s t',
-        'hsmiths4fyqlw5xw.onion s t',
-        'ozahtqwp25chjdjd.onion s t',
-        'electrum.hodlister.co s',
-        'electrum.hodlister.co s',
-        'btc.usebsv.com s50006',
-        'fortress.qtornado.com s443 t',
-        'ecdsa.net s110 t',
-        'e2.keff.org s t',
-        'currentlane.lovebitco.in s t',
-        'electrum.jochen-hoenicke.de s50005 t50003',
-        'vps5.hsmiths.com s',
-        'electrum.emzy.de s',
-    ]
+    PEERS = []
 
     @classmethod
     def warn_old_client_on_tx_broadcast(cls, client_ver):
