@@ -4,11 +4,11 @@
 ###############
 
 # configure electrumx
-export COIN=Pandora
+export COIN=Bitcoin
 export DAEMON_URL=http://user:password@127.0.0.1
 export NET=mainnet
 export CACHE_MB=400
-export DB_DIRECTORY=/home/username/.electrumx/quantumdb
+export DB_DIRECTORY=/home/username/.electrumx/electrumdb
 export SSL_CERTFILE=/home/username/.electrumx/certfile.crt
 export SSL_KEYFILE=/home/username/.electrumx/keyfile.key
 export BANNER_FILE=/home/username/.electrumx/banner
@@ -16,8 +16,8 @@ export DONATION_ADDRESS=your-donation-address
 
 # connectivity
 export HOST=
-export TCP_PORT=50501
-export SSL_PORT=50502
+export TCP_PORT=50001
+export SSL_PORT=50002
 
 # visibility
 export REPORT_HOST=hostname.com

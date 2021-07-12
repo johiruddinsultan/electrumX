@@ -7,7 +7,7 @@ Authors
 
   Original creator, past maintainer.
 
-* Quantum developers
+* Electrum developers
 
   Current maintainers.
 

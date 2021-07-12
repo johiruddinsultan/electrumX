@@ -1,12 +1,12 @@
 Features
 ========
 
-- Efficient, lightweight reimplementation of quantum-server
+- Efficient, lightweight reimplementation of electrum-server
 - Fast synchronization of bitcoin mainnet from Genesis.  Recent
   hardware should synchronize in well under 24 hours.  The fastest
   time to height 448k (mid January 2017) reported is under 4h 30m.  On
-  the same hardware JQuantum would take around 4 days and
-  quantum-server probably around 1 month.
+  the same hardware JElectrum would take around 4 days and
+  electrum-server probably around 1 month.
 - Various configurable means of controlling resource consumption and
   handling bad clients and denial of service attacks.  These include
   maximum connection counts, subscription limits per-connection and
@@ -36,7 +36,7 @@ blockchain indexer:
 
 - aggressive caching and batching of DB writes
 - more compact and efficient representation of UTXOs, address index,
-  and history.  Quantum Server stores full transaction hash and
+  and history.  Electrum Server stores full transaction hash and
   height for each UTXO, and does the same in its pruned history.  In
   contrast ElectrumX just stores the transaction number in the linear
   history of transactions.  ElectrumX can determine block

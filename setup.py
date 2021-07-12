@@ -26,11 +26,11 @@ setuptools.setup(
     },
     packages=setuptools.find_packages(include=('electrumx*',)),
     description='ElectrumX Server',
-    author='Quantum developers',
+    author='Electrum developers',
     author_email='ragislam@gmail.com',
     license='MIT Licence',
     url='https://github.com/johiruddinsultan/electrumx',
-    long_description='Server implementation for the Quantum protocol',
+    long_description='Server implementation for the Electrum protocol',
     download_url=('https://github.com/johiruddinsultan/electrumx/archive/'
                   f'{version}.tar.gz'),
     classifiers=[   

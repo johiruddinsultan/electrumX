@@ -375,7 +375,7 @@ Identify the client to the server and negotiate the protocol version.
 
 **Examples**::
 
-  server.version("Quantum 3.0.6", ["1.1", "1.2"])
+  server.version("Electrum 3.0.6", ["1.1", "1.2"])
   server.version("2.7.1", "1.0")
 
 **Example Results**::

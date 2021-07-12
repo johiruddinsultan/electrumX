@@ -386,7 +386,7 @@ to height 280,000 is should be fairly accurate.
 Creating a self-signed SSL certificate
 ======================================
 
-These instructions are based on those of the ``quantum-server``
+These instructions are based on those of the ``electrum-server``
 documentation.
 
 To run an SSL server you need to generate a self-signed certificate
@@ -404,7 +404,7 @@ challenge password just leave it empty and press enter::
     ...
     Country Name (2 letter code) [AU]:US
     State or Province Name (full name) [Some-State]:California
-    Common Name (eg, YOUR name) []: quantum-server.tld
+    Common Name (eg, YOUR name) []: electrum-server.tld
     ...
     A challenge password []:
     ...
@@ -414,7 +414,7 @@ The :file:`server.crt` file goes in :envvar:`SSL_CERTFILE` and
 :file:`server.key` in :envvar:`SSL_KEYFILE` in the server process's
 environment.
 
-Starting with Quantum 1.9, the client will learn and locally cache
+Starting with Electrum 1.9, the client will learn and locally cache
 the SSL certificate for your server upon the first request to prevent
 man-in-the middle attacks for all further connections.
 

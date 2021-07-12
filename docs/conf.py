@@ -21,7 +21,7 @@ VERSION="ElectrumX 1.16.0"
 
 project = 'ElectrumX'
 copyright = '2016-2020, various'
-author = 'Quantum developers'
+author = 'Electrum developers'
 
 # The full version including branding
 release = VERSION
@@ -81,7 +81,7 @@ html_theme = 'alabaster'
 # documentation.
 #
 html_theme_options = {
-    'description': 'Lightweight Quantum Server in Python',
+    'description': 'Lightweight Electrum Server in Python',
     'github_user': 'spesmilo',
     'github_repo': 'electrumx',
     'github_button': True,

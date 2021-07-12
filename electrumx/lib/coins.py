@@ -608,7 +608,7 @@ class BitcoinCash(BitcoinMixin, Coin):
     PEERS = [
         'bch.imaginary.cash s t',
         'electroncash.dk s t',
-        'quantum.imaginary.cash s t',
+        'electrum.imaginary.cash s t',
         'bch.loping.net s t',
         'electroncash.de s t',
         'blackie.c3-soft.com s t',
@@ -635,7 +635,7 @@ class Pandora(PandoraMixin, Coin):
     TX_COUNT_HEIGHT = 4849
     TX_PER_BLOCK = 2200
     CRASH_CLIENT_VER = (3, 2, 3)
-   # BLACKLIST_URL = 'https://quantum.org/blacklist.json'
+   # BLACKLIST_URL = 'https://electrum.org/blacklist.json'
     PEERS = []
 
     @classmethod
@@ -643,7 +643,7 @@ class Pandora(PandoraMixin, Coin):
         if client_ver < (3, 3, 3):
             return ('<br/><br/>'
                     'Your transaction was successfully broadcast.<br/><br/>'
-                    'However, you are using a VULNERABLE version of Quantum.<br/>'
+                    'However, you are using a VULNERABLE version of Electrum.<br/>'
                     'Download the new version from the usual place:<br/>'
                     'https://pandoracoin.org/'
                     '<br/><br/>')
@@ -673,23 +673,23 @@ class Bitcoin(BitcoinMixin, Coin):
     TX_COUNT_HEIGHT = 690723	
     TX_PER_BLOCK = 2200
     CRASH_CLIENT_VER = (3, 2, 3)
-    BLACKLIST_URL = 'https://quantum.org/blacklist.json'
+    BLACKLIST_URL = 'https://electrum.org/blacklist.json'
     PEERS = [
-        'quantum.vom-stausee.de s t',
-        'quantum.hsmiths.com s t',
+        'electrum.vom-stausee.de s t',
+        'electrum.hsmiths.com s t',
         'helicarrier.bauerj.eu s t',
         'hsmiths4fyqlw5xw.onion s t',
         'ozahtqwp25chjdjd.onion s t',
-        'quantum.hodlister.co s',
-        'quantum3.hodlister.co s',
+        'electrum.hodlister.co s',
+        'electrum.hodlister.co s',
         'btc.usebsv.com s50006',
         'fortress.qtornado.com s443 t',
         'ecdsa.net s110 t',
         'e2.keff.org s t',
         'currentlane.lovebitco.in s t',
-        'quantum.jochen-hoenicke.de s50005 t50003',
+        'electrum.jochen-hoenicke.de s50005 t50003',
         'vps5.hsmiths.com s',
-        'quantum.emzy.de s',
+        'electrum.emzy.de s',
     ]
 
     @classmethod
@@ -697,9 +697,9 @@ class Bitcoin(BitcoinMixin, Coin):
         if client_ver < (3, 3, 3):
             return ('<br/><br/>'
                     'Your transaction was successfully broadcast.<br/><br/>'
-                    'However, you are using a VULNERABLE version of Quantum.<br/>'
+                    'However, you are using a VULNERABLE version of Electrum.<br/>'
                     'Download the new version from the usual place:<br/>'
-                    'https://quantum.org/'
+                    'https://electrum.org/'
                     '<br/><br/>')
         return False
 
@@ -891,7 +891,7 @@ class BitcoinSVTestnet(BitcoinTestnetMixin, Coin):
 class BitcoinSVScalingTestnet(BitcoinSVTestnet):
     NET = "scalingtest"
     PEERS = [
-        'stn-server.quantumsv.io t51001 s51002',
+        'stn-server.electrumsv.io t51001 s51002',
     ]
     TX_COUNT = 2015
     TX_COUNT_HEIGHT = 5711
@@ -956,9 +956,9 @@ class BitcoinTestnet(BitcoinTestnetMixin, Coin):
         if client_ver < (3, 3, 3):
             return ('<br/><br/>'
                     'Your transaction was successfully broadcast.<br/><br/>'
-                    'However, you are using a VULNERABLE version of Quantum.<br/>'
+                    'However, you are using a VULNERABLE version of Electrum.<br/>'
                     'Download the new version from the usual place:<br/>'
-                    'https://quantum.org/'
+                    'https://electrum.org/'
                     '<br/><br/>')
         return False
 
@@ -1050,11 +1050,11 @@ class Litecoin(Coin):
     REORG_LIMIT = 800
     PEERS = [
         'ex.lug.gs s444',
-        'quantum-ltc.bysh.me s t',
-        'quantum-ltc.ddns.net s t',
-        'quantum-ltc.wilv.in s t',
-        'quantum.cryptomachine.com p1000 s t',
-        'quantum.ltc.xurious.com s t',
+        'electrum-ltc.bysh.me s t',
+        'electrum-ltc.ddns.net s t',
+        'electrum-ltc.wilv.in s t',
+        'electrum.cryptomachine.com p1000 s t',
+        'electrum.ltc.xurious.com s t',
         'eywr5eubdbbe2laq.onion s50008 t50007',
     ]
 
@@ -1076,9 +1076,9 @@ class LitecoinTestnet(Litecoin):
     REORG_LIMIT = 4000
     PEER_DEFAULT_PORTS = {'t': '51001', 's': '51002'}
     PEERS = [
-        'quantum-ltc.bysh.me s t',
-        'quantum.ltc.xurious.com s t',
-        'ipv6-only.quantum.random.re s t',
+        'electrum-ltc.bysh.me s t',
+        'electrum.ltc.xurious.com s t',
+        'ipv6-only.electrum.random.re s t',
     ]
 
 
@@ -1225,7 +1225,7 @@ class Namecoin(NameIndexMixin, AuxPowMixin, Coin):
     TX_PER_BLOCK = 10
     RPC_PORT = 8336
     PEERS = [
-        'quantum-nmc.le-space.de s50502',
+        'electrum-nmc.le-space.de s50502',
         'ex.lug.gs s446',
         'luggscoqbymhvnkp.onion t82',
         'nmc.bitcoins.sk s50502',
@@ -1318,11 +1318,11 @@ class Dash(Coin):
     TX_PER_BLOCK = 4
     RPC_PORT = 9998
     PEERS = [
-        'quantum.dash.org s t',
-        'quantum.masternode.io s t',
-        'quantum-drk.club s t',
+        'electrum.dash.org s t',
+        'electrum.masternode.io s t',
+        'electrum-drk.club s t',
         'dashcrypto.space s t',
-        'quantum.dash.siampm.com s t',
+        'electrum.dash.siampm.com s t',
         'wl4sfwq2hwxnodof.onion s t',
     ]
     SESSIONCLS = DashElectrumX
@@ -1352,7 +1352,7 @@ class DashTestnet(Dash):
     RPC_PORT = 19998
     PEER_DEFAULT_PORTS = {'t': '51001', 's': '51002'}
     PEERS = [
-        'quantum.dash.siampm.com s t',
+        'electrum.dash.siampm.com s t',
         'dasht.random.re s54002 t54001',
     ]
 
@@ -1433,8 +1433,8 @@ class FairCoin(Coin):
     RPC_PORT = 40405
     PEER_DEFAULT_PORTS = {'t': '51811', 's': '51812'}
     PEERS = [
-        'quantum.faircoin.world s',
-        'quantumfair.punto0.org s',
+        'electrum.faircoin.world s',
+        'electrumfair.punto0.org s',
     ]
 
     @classmethod
@@ -1573,7 +1573,7 @@ class Koto(Coin):
     REORG_LIMIT = 800
     PEERS = [
         'fr.kotocoin.info s t',
-        'quantum.kotocoin.info s t',
+        'electrum.kotocoin.info s t',
     ]
 
 
@@ -1760,7 +1760,7 @@ class Peercoin(Coin):
     REORG_LIMIT = 5000
 
     PEERS = [
-        "quantum.peercoinexplorer.net s"
+        "electrum.peercoinexplorer.net s"
     ]
 
     VALUE_PER_COIN = 1000000
@@ -1777,7 +1777,7 @@ class PeercoinTestnet(Peercoin):
                     'b0658ce630cc727c0cca81aec47c9f06')
     ESTIMATE_FEE = 0.001
     PEERS = [
-        "testnet-quantum.peercoinexplorer.net s"
+        "testnet-electrum.peercoinexplorer.net s"
     ]
 
 
@@ -1860,8 +1860,8 @@ class TokenPay(ScryptMixin, Coin):
     XPRV_VERBYTES = bytes.fromhex("0488ADE4")
 
     PEERS = [
-        "quantum-us.tpay.ai s",
-        "quantum-eu.tpay.ai s",
+        "electrum-us.tpay.ai s",
+        "electrum-eu.tpay.ai s",
     ]
 
 
@@ -1899,13 +1899,13 @@ class Monacoin(Coin):
     TX_PER_BLOCK = 2
     RPC_PORT = 9402
     REORG_LIMIT = 1000
-    BLACKLIST_URL = 'https://quantum-mona.org/blacklist.json'
+    BLACKLIST_URL = 'https://electrum-mona.org/blacklist.json'
     PEERS = [
         'electrumx.tamami-foundation.org s t',
         'electrumx3.monacoin.nl s t',
         'electrumx1.monacoin.ninja s t',
         'electrumx2.movsign.info s t',
-        'quantum-mona.bitbank.cc s t',
+        'electrum-mona.bitbank.cc s t',
         'ri7rzlmdaf4eqbza.onion s t',
     ]
 
@@ -2535,7 +2535,7 @@ class Pac(Coin):
     TX_PER_BLOCK = 2
     RPC_PORT = 7111
     PEERS = [
-        'quantum.paccoin.io s t',
+        'electrum.paccoin.io s t',
         'electro-pac.paccoin.io s t'
     ]
     SESSIONCLS = DashElectrumX
@@ -2591,7 +2591,7 @@ class Zcoin(Coin):
     DAEMON = daemon.ZcoinMtpDaemon
     DESERIALIZER = lib_tx.DeserializerZcoin
     PEERS = [
-        'quantum.polispay.com'
+        'electrum.polispay.com'
     ]
 
     @classmethod
@@ -2650,7 +2650,7 @@ class Polis(Coin):
     TX_PER_BLOCK = 4
     RPC_PORT = 24127
     PEERS = [
-        'quantum.polispay.com'
+        'electrum.polispay.com'
     ]
     SESSIONCLS = DashElectrumX
     DAEMON = daemon.DashDaemon
@@ -2678,7 +2678,7 @@ class MNPCoin(Coin):
     TX_PER_BLOCK = 4
     RPC_PORT = 13373
     PEERS = [
-        'quantum.polispay.com'
+        'electrum.polispay.com'
     ]
     SESSIONCLS = DashElectrumX
     DAEMON = daemon.DashDaemon
@@ -2710,7 +2710,7 @@ class ColossusXT(Coin):
     TX_PER_BLOCK = 4
     RPC_PORT = 51473
     PEERS = [
-        'quantum.polispay.com'
+        'electrum.polispay.com'
     ]
     SESSIONCLS = DashElectrumX
     DAEMON = daemon.DashDaemon
@@ -2778,8 +2778,8 @@ class Groestlcoin(Coin):
     RPC_PORT = 1441
     BLACKLIST_URL = 'https://groestlcoin.org/blacklist.json'
     PEERS = [
-        'quantum1.groestlcoin.org s t',
-        'quantum2.groestlcoin.org s t',
+        'electrum1.groestlcoin.org s t',
+        'electrum2.groestlcoin.org s t',
         '6brsrbiinpc32tfc.onion t',
         'xkj42efxrcy6vbfw.onion t',
     ]
@@ -2809,8 +2809,8 @@ class GroestlcoinTestnet(Groestlcoin):
                     '23230164c0052a28876255b7dcf2cd36')
     RPC_PORT = 17766
     PEERS = [
-        'quantum-test1.groestlcoin.org s t',
-        'quantum-test2.groestlcoin.org s t',
+        'electrum-test1.groestlcoin.org s t',
+        'electrum-test2.groestlcoin.org s t',
         '7frvhgofuf522b5i.onion t',
         'aocojvqcybdoxekv.onion t',
     ]
@@ -3168,7 +3168,7 @@ class Ritocoin(Coin):
     RPC_PORT = 8766
     REORG_LIMIT = 55
     PEERS = [
-        'quantum-rito.minermore.com s t'
+        'electrum-rito.minermore.com s t'
     ]
 
     @classmethod

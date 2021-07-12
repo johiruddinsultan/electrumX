@@ -149,8 +149,8 @@ Version 1.9.3 (05 Feb 2019)
 Version 1.9.2 (03 Feb 2019)
 ===========================
 
-* restore protocol version 1.2 and send a warning for old BTC Quantum clients that they
-  need to upgrade.  This is an attempt to protect users of old versions of Quantum from
+* restore protocol version 1.2 and send a warning for old BTC Electrum clients that they
+  need to upgrade.  This is an attempt to protect users of old versions of Electrum from
   the ongoing phishing attacks
 * increase default MAX_SEND for AuxPow Chains.  Truncate AuxPow for block heights covered
   by a checkpoint.  (jeremyrand)
@@ -181,5 +181,5 @@ Original author of ElectrumX:
 
 This fork maintained by:
 
-**Quantum developers** quantumdev@gmail.com  https://github.com/spesmilo
+**Electrum developers** electrumdev@gmail.com  https://github.com/spesmilo
 

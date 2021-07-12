@@ -27,9 +27,9 @@ Started when the ElectrumX process starts.
 ElectrumX
 ---------
 
-Handles JSON Quantum client connections over TCP or SSL.  One
+Handles JSON Electrum client connections over TCP or SSL.  One
 instance per client session.  Should be the only component concerned
-with the details of the Quantum wire protocol.
+with the details of the Electrum wire protocol.
 
 Not started until the Block Processor has caught up with pandorad.
 

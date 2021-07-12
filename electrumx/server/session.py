@@ -937,7 +937,7 @@ class SessionBase(RPCSession):
 
 
 class ElectrumX(SessionBase):
-    '''A TCP server that handles incoming Quantum connections.'''
+    '''A TCP server that handles incoming Electrum connections.'''
 
     PROTOCOL_MIN = (1, 4)
     PROTOCOL_MAX = (1, 4, 2)
@@ -1069,7 +1069,7 @@ class ElectrumX(SessionBase):
 
         Status is a hex string, but must be None if there is no history.
         '''
-        # Note history is ordered and mempool unordered in quantum-server
+        # Note history is ordered and mempool unordered in electrum-server
         # For mempool, height is -1 if it has unconfirmed inputs, otherwise 0
         db_history, cost = await self.session_mgr.limited_history(hashX)
         mempool = await self.mempool.transaction_summaries(hashX)
@@ -1139,7 +1139,7 @@ class ElectrumX(SessionBase):
         return await self.get_balance(hashX)
 
     async def unconfirmed_history(self, hashX):
-        # Note unconfirmed history is unordered in quantum-server
+        # Note unconfirmed history is unordered in electrum-server
         # height is -1 if it has unconfirmed inputs, otherwise 0
         result = [{'tx_hash': hash_to_hex_str(tx.hash),
                    'height': -tx.has_unconfirmed_inputs,
@@ -1383,9 +1383,9 @@ class ElectrumX(SessionBase):
             is_old_client = client_ver != (0,) and client_ver <= crash_client_ver
             if is_old_protocol and is_old_client:
                 self.logger.info(f'attempting to crash old client with version {self.client}')
-                # this can crash quantum client 2.6 <= v < 3.1.2
+                # this can crash electrum client 2.6 <= v < 3.1.2
                 await self.send_notification('blockchain.relayfee', ())
-                # this can crash quantum client (v < 2.8.2) UNION (3.0.0 <= v < 3.3.0)
+                # this can crash electrum client (v < 2.8.2) UNION (3.0.0 <= v < 3.3.0)
                 await self.send_notification('blockchain.estimatefee', ())
 
     async def transaction_broadcast(self, raw_tx):
@@ -1519,7 +1519,7 @@ class LocalRPC(SessionBase):
 
 
 class DashElectrumX(ElectrumX):
-    '''A TCP server that handles incoming Quantum Dash connections.'''
+    '''A TCP server that handles incoming Electrum Dash connections.'''
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -1710,7 +1710,7 @@ class DashElectrumX(ElectrumX):
 
 
 class SmartCashElectrumX(DashElectrumX):
-    '''A TCP server that handles incoming Quantum-SMART connections.'''
+    '''A TCP server that handles incoming Electrum-SMART connections.'''
 
     def set_request_handlers(self, ptuple):
         super().set_request_handlers(ptuple)
