@@ -166,7 +166,7 @@ def test_SERVICES_default_rpc():
     os.environ['SERVICES'] = 'rpc://foo.bar'
     e = Env()
     assert e.services[0].host == 'foo.bar'
-    assert e.services[0].port == 8000
+    assert e.services[0].port == 5005
     os.environ['SERVICES'] = 'rpc://:800'
     e = Env()
     assert e.services[0].host == 'localhost'
@@ -174,7 +174,7 @@ def test_SERVICES_default_rpc():
     os.environ['SERVICES'] = 'rpc://'
     e = Env()
     assert e.services[0].host == 'localhost'
-    assert e.services[0].port == 8000
+    assert e.services[0].port == 5005
 
 
 def test_bad_SERVICES():
